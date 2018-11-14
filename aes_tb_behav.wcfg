@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="aes_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="aes_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject db_ref_id="1" fp_name="/aes_tb/key" type="array">
+      <obj_property name="ElementShortName">key[127:0]</obj_property>
+      <obj_property name="ObjectShortName">key[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r1" type="array">
+      <obj_property name="ElementShortName">r1[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r1[127:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r2" type="array">
+      <obj_property name="ElementShortName">r2[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r2[127:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r3" type="array">
+      <obj_property name="ElementShortName">r3[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r3[127:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r4" type="array">
+      <obj_property name="ElementShortName">r4[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r4[127:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r5" type="array">
+      <obj_property name="ElementShortName">r5[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r5[127:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r6" type="array">
+      <obj_property name="ElementShortName">r6[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r6[127:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r7" type="array">
+      <obj_property name="ElementShortName">r7[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r7[127:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r8" type="array">
+      <obj_property name="ElementShortName">r8[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r8[127:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r9" type="array">
+      <obj_property name="ElementShortName">r9[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r9[127:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/r10" type="array">
+      <obj_property name="ElementShortName">r10[127:0]</obj_property>
+      <obj_property name="ObjectShortName">r10[127:0]</obj_property>
+   </wvobject>
+</wave_config>

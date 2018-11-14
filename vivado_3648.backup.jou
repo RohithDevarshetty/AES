@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:33:10 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Tue Apr 24 12:35:12 2018
+# Process ID: 3648
+# Log file: G:/AES 1/vivado.log
+# Journal file: G:/AES 1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {G:\AES 1\aes.xpr}
+update_compile_order -fileset sources_1
+save_project_as project_1 C:/Users/Admin/Desktop/project_1 -force
+launch_xsim -simset sim_1 -mode behavioral -noclean_dir

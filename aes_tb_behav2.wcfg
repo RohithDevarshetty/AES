@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="aes_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="aes_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="1" />
+   <wave_markers>
+      <marker time="1000000000" label="" />
+   </wave_markers>
+   <wvobject db_ref_id="1" fp_name="/aes_tb/textout" type="array">
+      <obj_property name="ElementShortName">textout[127:0]</obj_property>
+      <obj_property name="ObjectShortName">textout[127:0]</obj_property>
+   </wvobject>
+</wave_config>

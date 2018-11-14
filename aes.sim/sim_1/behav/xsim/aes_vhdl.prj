@@ -1,0 +1,38 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../aes.srcs/sources_1/new/add.vhd" \
+"../../../../aes.srcs/sources_1/new/addroundkey.vhd" \
+"../../../../aes.srcs/sources_1/new/affine.vhd" \
+"../../../../aes.srcs/sources_1/new/comp.vhd" \
+"../../../../aes.srcs/sources_1/new/con2.vhd" \
+"../../../../aes.srcs/sources_1/new/controller.vhd" \
+"../../../../aes.srcs/sources_1/new/datapath.vhd" \
+"../../../../aes.srcs/sources_1/new/decryption.vhd" \
+"../../../../aes.srcs/sources_1/new/encryption.vhd" \
+"../../../../aes.srcs/sources_1/new/inv.vhd" \
+"../../../../aes.srcs/sources_1/new/inv_affine.vhd" \
+"../../../../aes.srcs/sources_1/new/inv_lastround.vhd" \
+"../../../../aes.srcs/sources_1/new/inv_mix.vhd" \
+"../../../../aes.srcs/sources_1/new/inv_mixcolumns.vhd" \
+"../../../../aes.srcs/sources_1/new/inv_rounds.vhd" \
+"../../../../aes.srcs/sources_1/new/inv_sbox.vhd" \
+"../../../../aes.srcs/sources_1/new/inv_shiftrows.vhd" \
+"../../../../aes.srcs/sources_1/new/inv_subbytes.vhd" \
+"../../../../aes.srcs/sources_1/new/invcomp.vhd" \
+"../../../../aes.srcs/sources_1/new/keyexpansion.vhd" \
+"../../../../aes.srcs/sources_1/new/lastround.vhd" \
+"../../../../aes.srcs/sources_1/new/mixcolumn_c.vhd" \
+"../../../../aes.srcs/sources_1/new/mixcolumns.vhd" \
+"../../../../aes.srcs/sources_1/new/mul.vhd" \
+"../../../../aes.srcs/sources_1/new/mul2.vhd" \
+"../../../../aes.srcs/sources_1/new/mul_2.vhd" \
+"../../../../aes.srcs/sources_1/new/roundkeys.vhd" \
+"../../../../aes.srcs/sources_1/new/rounds.vhd" \
+"../../../../aes.srcs/sources_1/new/sbox.vhd" \
+"../../../../aes.srcs/sources_1/new/shift_rows.vhd" \
+"../../../../aes.srcs/sources_1/new/square.vhd" \
+"../../../../aes.srcs/sources_1/new/subbytes.vhd" \
+"../../../../aes.srcs/sources_1/new/aes.vhd" \
+
+# Do not sort compile order
+nosort

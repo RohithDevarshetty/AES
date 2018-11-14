@@ -1,0 +1,1 @@
+--debug "typical" --relax -L "xil_defaultlib" -L "secureip" --snapshot "aes_tb_behav" --prj "C:/vhdl/aes/aes.sim/sim_1/behav/aes_tb.prj" "xil_defaultlib.aes_tb" 

@@ -1,0 +1,79 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Apr 25 11:30:07 2018
+# Process ID: 14224
+# Current directory: B:/AES FINAL
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13004 B:\AES FINAL\aes.xpr
+# Log file: B:/AES FINAL/vivado.log
+# Journal file: B:/AES FINAL\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {B:/AES FINAL/aes.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_2
+launch_runs synth_2 -jobs 3
+wait_on_run synth_2
+open_run synth_2 -name synth_2
+report_power -name {power_1}
+create_run synth_3 -flow {Vivado Synthesis 2017} -strategy {Vivado Synthesis Defaults} -report_strategy {Vivado Synthesis Default Reports}
+current_run [get_runs synth_3]
+set_property top aes [current_fileset]
+set_property target_language VHDL [current_project]
+set_property flow {Vivado Implementation 2014} [get_runs impl_3]
+update_ip_catalog
+update_ip_catalog
+update_compile_order -fileset sources_1
+launch_runs synth_3 -jobs 3
+wait_on_run synth_3
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+report_utilization -name utilization_1
+ipx::package_project -root_dir {b:/aes final/aes.srcs} -vendor xilinx.com -library user -taxonomy /UserIP
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property  ip_repo_paths  {{b:/aes final/aes.srcs}} [current_project]
+update_ip_catalog
+create_bd_design "aes1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:aes:1.0 aes_0
+endgroup
+open_bd_design {B:/AES FINAL/aes.srcs/sources_1/bd/aes1/aes1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:system_ila:1.1 system_ila_0
+endgroup
+delete_bd_objs [get_bd_cells system_ila_0]
+set_property -dict [list CONFIG.C_PROBE_OUT1_WIDTH {128} CONFIG.C_PROBE_OUT0_WIDTH {128} CONFIG.C_PROBE_IN1_WIDTH {128} CONFIG.C_PROBE_IN0_WIDTH {128} CONFIG.C_NUM_PROBE_OUT {2} CONFIG.C_NUM_PROBE_IN {2}] [get_bd_cells vio_0]
+connect_bd_net [get_bd_pins aes_0/a] [get_bd_pins vio_0/probe_out0]
+connect_bd_net [get_bd_pins vio_0/probe_out1] [get_bd_pins aes_0/key]
+connect_bd_net [get_bd_pins aes_0/c] [get_bd_pins vio_0/probe_in0]
+connect_bd_net [get_bd_pins vio_0/probe_in1] [get_bd_pins aes_0/d]
+connect_bd_net [get_bd_pins ila_0/clk] [get_bd_pins vio_0/clk]
+regenerate_bd_layout
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config {Clk "New Clocking Wizard (100 MHz)" }  [get_bd_pins vio_0/clk]
+delete_bd_objs [get_bd_nets Net]
+delete_bd_objs [get_bd_cells clk_wiz]
+make_wrapper -files [get_files {{B:/AES FINAL/aes.srcs/sources_1/bd/aes1/aes1.bd}}] -top
+delete_bd_objs [get_bd_cells ila_0]
+make_wrapper -files [get_files {{B:/AES FINAL/aes.srcs/sources_1/bd/aes1/aes1.bd}}] -top
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0
+endgroup
+set_property -dict [list CONFIG.C_EN_STRG_QUAL {1} CONFIG.C_PROBE43_MU_CNT {2} CONFIG.C_PROBE42_MU_CNT {2} CONFIG.C_PROBE41_MU_CNT {2} CONFIG.C_PROBE40_MU_CNT {2} CONFIG.C_PROBE39_MU_CNT {2} CONFIG.C_PROBE38_MU_CNT {2} CONFIG.C_PROBE37_MU_CNT {2} CONFIG.C_PROBE36_MU_CNT {2} CONFIG.C_PROBE35_MU_CNT {2} CONFIG.C_PROBE34_MU_CNT {2} CONFIG.C_PROBE33_MU_CNT {2} CONFIG.C_PROBE32_MU_CNT {2} CONFIG.C_PROBE31_MU_CNT {2} CONFIG.C_PROBE30_MU_CNT {2} CONFIG.C_PROBE29_MU_CNT {2} CONFIG.C_PROBE28_MU_CNT {2} CONFIG.C_PROBE27_MU_CNT {2} CONFIG.C_PROBE26_MU_CNT {2} CONFIG.C_PROBE25_MU_CNT {2} CONFIG.C_PROBE24_MU_CNT {2} CONFIG.C_PROBE23_MU_CNT {2} CONFIG.C_PROBE22_MU_CNT {2} CONFIG.C_PROBE21_MU_CNT {2} CONFIG.C_PROBE20_MU_CNT {2} CONFIG.C_PROBE19_MU_CNT {2} CONFIG.C_PROBE18_MU_CNT {2} CONFIG.C_PROBE17_MU_CNT {2} CONFIG.C_PROBE16_MU_CNT {2} CONFIG.C_PROBE15_MU_CNT {2} CONFIG.C_PROBE14_MU_CNT {2} CONFIG.C_PROBE13_MU_CNT {2} CONFIG.C_PROBE12_MU_CNT {2} CONFIG.C_PROBE11_MU_CNT {2} CONFIG.C_PROBE10_MU_CNT {2} CONFIG.C_PROBE9_MU_CNT {2} CONFIG.C_PROBE8_MU_CNT {2} CONFIG.C_PROBE7_MU_CNT {2} CONFIG.C_PROBE6_MU_CNT {2} CONFIG.C_PROBE5_MU_CNT {2} CONFIG.C_PROBE4_MU_CNT {2} CONFIG.C_PROBE3_MU_CNT {2} CONFIG.C_PROBE2_MU_CNT {2} CONFIG.C_PROBE1_MU_CNT {2} CONFIG.C_PROBE0_MU_CNT {2} CONFIG.ALL_PROBE_SAME_MU_CNT {2}] [get_bd_cells ila_0]
+save_bd_design
+reset_run synth_3
+launch_runs synth_3 -jobs 3
+wait_on_run synth_3
+connect_bd_net [get_bd_pins ila_0/clk] [get_bd_pins vio_0/clk]
+make_wrapper -files [get_files {{B:/AES FINAL/aes.srcs/sources_1/bd/aes1/aes1.bd}}] -top
+delete_bd_objs [get_bd_nets Net]
+save_bd_design

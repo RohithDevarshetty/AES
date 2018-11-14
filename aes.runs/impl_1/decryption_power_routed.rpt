@@ -1,0 +1,149 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date             : Tue Apr 24 14:12:39 2018
+| Host             : DESKTOP-L6L6I3C running 64-bit major release  (build 9200)
+| Command          : report_power -file decryption_power_routed.rpt -pb decryption_power_summary_routed.pb -rpx decryption_power_routed.rpx
+| Design           : decryption
+| Device           : xc7a200tfbg676-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-------------------------------------+
+| Total On-Chip Power (W)  | 10277.468 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                        |
+| Power Budget Margin (W)  | NA                                  |
+| Dynamic (W)              | 10275.794                           |
+| Device Static (W)        | 1.674                               |
+| Effective TJA (C/W)      | 1.9                                 |
+| Max Ambient (C)          | 0.0                                 |
+| Junction Temperature (C) | 125.0                               |
+| Confidence Level         | Low                                 |
+| Setting File             | ---                                 |
+| Simulation Activity File | ---                                 |
+| Design Nets Matched      | NA                                  |
++--------------------------+-------------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |  5199.278 |    22612 |       --- |             --- |
+|   LUT as Logic |  5199.278 |    20929 |    133800 |           15.64 |
+| Signals        |  4954.415 |    22868 |       --- |             --- |
+| I/O            |   122.402 |      384 |       400 |           96.00 |
+| Static Power   |     1.674 |          |           |                 |
+| Total          | 10277.770 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 | 10155.625 |   10154.415 |      1.210 |
+| Vccaux    |       1.800 |    10.142 |       9.936 |      0.206 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |    57.501 |      57.496 |      0.005 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.048 |       0.000 |      0.048 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------+-----------+
+| Name       | Power (W) |
++------------+-----------+
+| decryption | 10276.096 |
+|   u10      |  3153.197 |
+|   u2       |  6974.956 |
+|   u3       |     3.928 |
+|   u4       |     2.839 |
+|   u5       |     3.238 |
+|   u6       |     2.660 |
+|   u7       |     2.919 |
+|   u8       |     2.468 |
+|   u9       |     2.422 |
++------------+-----------+
+
+

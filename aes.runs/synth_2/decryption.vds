@@ -1,0 +1,465 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Apr 25 11:31:16 2018
+# Process ID: 13208
+# Current directory: B:/AES FINAL/aes.runs/synth_2
+# Command line: vivado.exe -log decryption.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source decryption.tcl
+# Log file: B:/AES FINAL/aes.runs/synth_2/decryption.vds
+# Journal file: B:/AES FINAL/aes.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source decryption.tcl -notrace
+Command: synth_design -top decryption -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4688 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 346.461 ; gain = 101.848
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'decryption' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:39]
+INFO: [Synth 8-3491] module 'roundkeys' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:34' bound to instance 'u1' of component 'roundkeys' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'roundkeys' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:39]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u1' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:40]
+INFO: [Synth 8-3491] module 'sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:34' bound to instance 'u1' of component 'sbox' [B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'sbox' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:39]
+INFO: [Synth 8-3491] module 'comp' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/comp.vhd:34' bound to instance 'x0' of component 'comp' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'comp' [B:/AES FINAL/aes.srcs/sources_1/new/comp.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'comp' (1#1) [B:/AES FINAL/aes.srcs/sources_1/new/comp.vhd:39]
+INFO: [Synth 8-3491] module 'add' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/add.vhd:33' bound to instance 'x1' of component 'add' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:78]
+INFO: [Synth 8-638] synthesizing module 'add' [B:/AES FINAL/aes.srcs/sources_1/new/add.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'add' (2#1) [B:/AES FINAL/aes.srcs/sources_1/new/add.vhd:39]
+INFO: [Synth 8-3491] module 'mul' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:33' bound to instance 'x2' of component 'mul' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'mul' [B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:39]
+INFO: [Synth 8-3491] module 'mul2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul2.vhd:34' bound to instance 'm1' of component 'mul2' [B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'mul2' [B:/AES FINAL/aes.srcs/sources_1/new/mul2.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'mul2' (3#1) [B:/AES FINAL/aes.srcs/sources_1/new/mul2.vhd:40]
+INFO: [Synth 8-3491] module 'mul2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul2.vhd:34' bound to instance 'm2' of component 'mul2' [B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:53]
+INFO: [Synth 8-3491] module 'mul2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul2.vhd:34' bound to instance 'm3' of component 'mul2' [B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:54]
+INFO: [Synth 8-3491] module 'mul2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul2.vhd:34' bound to instance 'm4' of component 'mul2' [B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:55]
+INFO: [Synth 8-3491] module 'con2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/con2.vhd:34' bound to instance 'm5' of component 'con2' [B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'con2' [B:/AES FINAL/aes.srcs/sources_1/new/con2.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'con2' (4#1) [B:/AES FINAL/aes.srcs/sources_1/new/con2.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'mul' (5#1) [B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:39]
+INFO: [Synth 8-3491] module 'square' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/square.vhd:34' bound to instance 'x3' of component 'square' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:80]
+INFO: [Synth 8-638] synthesizing module 'square' [B:/AES FINAL/aes.srcs/sources_1/new/square.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'square' (6#1) [B:/AES FINAL/aes.srcs/sources_1/new/square.vhd:39]
+INFO: [Synth 8-3491] module 'add' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/add.vhd:33' bound to instance 'x4' of component 'add' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:81]
+INFO: [Synth 8-3491] module 'inv' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv.vhd:34' bound to instance 'x5' of component 'inv' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'xil_defaultlib_inv' [B:/AES FINAL/aes.srcs/sources_1/new/inv.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'xil_defaultlib_inv' (7#1) [B:/AES FINAL/aes.srcs/sources_1/new/inv.vhd:39]
+INFO: [Synth 8-3491] module 'mul' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:33' bound to instance 'x6' of component 'mul' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:83]
+INFO: [Synth 8-3491] module 'mul' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:33' bound to instance 'x7' of component 'mul' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:84]
+INFO: [Synth 8-3491] module 'invcomp' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/invcomp.vhd:34' bound to instance 'x8' of component 'invcomp' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'invcomp' [B:/AES FINAL/aes.srcs/sources_1/new/invcomp.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'invcomp' (8#1) [B:/AES FINAL/aes.srcs/sources_1/new/invcomp.vhd:39]
+INFO: [Synth 8-3491] module 'affine' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/affine.vhd:34' bound to instance 'x9' of component 'affine' [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'affine' [B:/AES FINAL/aes.srcs/sources_1/new/affine.vhd:39]
+WARNING: [Synth 8-614] signal 'a' is read in the process but is not in the sensitivity list [B:/AES FINAL/aes.srcs/sources_1/new/affine.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'affine' (9#1) [B:/AES FINAL/aes.srcs/sources_1/new/affine.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'sbox' (10#1) [B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:39]
+INFO: [Synth 8-3491] module 'sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:34' bound to instance 'u2' of component 'sbox' [B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:57]
+INFO: [Synth 8-3491] module 'sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:34' bound to instance 'u3' of component 'sbox' [B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:58]
+INFO: [Synth 8-3491] module 'sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/sbox.vhd:34' bound to instance 'u4' of component 'sbox' [B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'keyexpansion' (11#1) [B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:40]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u2' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:61]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u3' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:63]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u4' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:65]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u5' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:67]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u6' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:69]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u7' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:71]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u8' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:73]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u9' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:75]
+INFO: [Synth 8-3491] module 'keyexpansion' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/keyexpansion.vhd:34' bound to instance 'u10' of component 'keyexpansion' [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'roundkeys' (12#1) [B:/AES FINAL/aes.srcs/sources_1/new/roundkeys.vhd:39]
+INFO: [Synth 8-3491] module 'inv_rounds' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:34' bound to instance 'u2' of component 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:40]
+INFO: [Synth 8-3491] module 'inv_shiftrows' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_shiftrows.vhd:34' bound to instance 'u1' of component 'inv_shiftrows' [B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'inv_shiftrows' [B:/AES FINAL/aes.srcs/sources_1/new/inv_shiftrows.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'inv_shiftrows' (13#1) [B:/AES FINAL/aes.srcs/sources_1/new/inv_shiftrows.vhd:39]
+INFO: [Synth 8-3491] module 'inv_subbytes' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:34' bound to instance 'u2' of component 'inv_subbytes' [B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:61]
+INFO: [Synth 8-638] synthesizing module 'inv_subbytes' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:39]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u1' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:39]
+INFO: [Synth 8-3491] module 'inv_affine' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_affine.vhd:34' bound to instance 'x0' of component 'inv_affine' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'inv_affine' [B:/AES FINAL/aes.srcs/sources_1/new/inv_affine.vhd:39]
+WARNING: [Synth 8-614] signal 'a' is read in the process but is not in the sensitivity list [B:/AES FINAL/aes.srcs/sources_1/new/inv_affine.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'inv_affine' (14#1) [B:/AES FINAL/aes.srcs/sources_1/new/inv_affine.vhd:39]
+INFO: [Synth 8-3491] module 'comp' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/comp.vhd:34' bound to instance 'x1' of component 'comp' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:75]
+INFO: [Synth 8-3491] module 'add' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/add.vhd:33' bound to instance 'x2' of component 'add' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:78]
+INFO: [Synth 8-3491] module 'mul' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:33' bound to instance 'x3' of component 'mul' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:79]
+INFO: [Synth 8-3491] module 'square' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/square.vhd:34' bound to instance 'x4' of component 'square' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:80]
+INFO: [Synth 8-3491] module 'add' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/add.vhd:33' bound to instance 'x5' of component 'add' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:81]
+INFO: [Synth 8-3491] module 'inv' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv.vhd:34' bound to instance 'x6' of component 'inv' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:82]
+INFO: [Synth 8-3491] module 'mul' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:33' bound to instance 'x7' of component 'mul' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:83]
+INFO: [Synth 8-3491] module 'mul' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul.vhd:33' bound to instance 'x8' of component 'mul' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:84]
+INFO: [Synth 8-3491] module 'invcomp' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/invcomp.vhd:34' bound to instance 'x9' of component 'invcomp' [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'inv_sbox' (15#1) [B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:39]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u2' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:46]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u3' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:47]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u4' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:48]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u5' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:49]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u6' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:50]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u7' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:51]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u8' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:52]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u9' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:53]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u10' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:54]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u11' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:55]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u12' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:56]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u13' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:57]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u14' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:58]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u15' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:59]
+INFO: [Synth 8-3491] module 'inv_sbox' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_sbox.vhd:34' bound to instance 'u16' of component 'inv_sbox' [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'inv_subbytes' (16#1) [B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:39]
+INFO: [Synth 8-3491] module 'addroundkey' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/addroundkey.vhd:34' bound to instance 'u3' of component 'addroundkey' [B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'addroundkey' [B:/AES FINAL/aes.srcs/sources_1/new/addroundkey.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'addroundkey' (17#1) [B:/AES FINAL/aes.srcs/sources_1/new/addroundkey.vhd:40]
+INFO: [Synth 8-3491] module 'inv_mixcolumns' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:34' bound to instance 'u4' of component 'inv_mixcolumns' [B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:63]
+INFO: [Synth 8-638] synthesizing module 'inv_mixcolumns' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:39]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u1' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:39]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u1' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'mul_2' (18#1) [B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:39]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u2' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:48]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u3' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:50]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u4' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:52]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u5' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:53]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u6' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:55]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u7' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:59]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u8' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:61]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u9' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:62]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u10' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:66]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u11' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:67]
+INFO: [Synth 8-3491] module 'mul_2' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/mul_2.vhd:34' bound to instance 'u12' of component 'mul_2' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'inv_mix' (19#1) [B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:39]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u2' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:49]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u3' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:50]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u4' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:51]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u5' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:53]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u6' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:54]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u7' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:55]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u8' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:56]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u9' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:58]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u10' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:59]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u11' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:60]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u12' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:61]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u13' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:63]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u14' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:64]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u15' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:65]
+INFO: [Synth 8-3491] module 'inv_mix' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_mix.vhd:34' bound to instance 'u16' of component 'inv_mix' [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:66]
+INFO: [Synth 8-256] done synthesizing module 'inv_mixcolumns' (20#1) [B:/AES FINAL/aes.srcs/sources_1/new/inv_mixcolumns.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'inv_rounds' (21#1) [B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:40]
+INFO: [Synth 8-3491] module 'inv_rounds' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:34' bound to instance 'u3' of component 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:62]
+INFO: [Synth 8-3491] module 'inv_rounds' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:34' bound to instance 'u4' of component 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:63]
+INFO: [Synth 8-3491] module 'inv_rounds' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:34' bound to instance 'u5' of component 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:64]
+INFO: [Synth 8-3491] module 'inv_rounds' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:34' bound to instance 'u6' of component 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:65]
+INFO: [Synth 8-3491] module 'inv_rounds' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:34' bound to instance 'u7' of component 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:66]
+INFO: [Synth 8-3491] module 'inv_rounds' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:34' bound to instance 'u8' of component 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:67]
+INFO: [Synth 8-3491] module 'inv_rounds' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:34' bound to instance 'u9' of component 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:68]
+INFO: [Synth 8-3491] module 'inv_rounds' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_rounds.vhd:34' bound to instance 'u10' of component 'inv_rounds' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:69]
+INFO: [Synth 8-3491] module 'inv_lastround' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_lastround.vhd:34' bound to instance 'u11' of component 'inv_lastround' [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'inv_lastround' [B:/AES FINAL/aes.srcs/sources_1/new/inv_lastround.vhd:40]
+INFO: [Synth 8-3491] module 'inv_shiftrows' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_shiftrows.vhd:34' bound to instance 'u1' of component 'inv_shiftrows' [B:/AES FINAL/aes.srcs/sources_1/new/inv_lastround.vhd:56]
+INFO: [Synth 8-3491] module 'inv_subbytes' declared at 'B:/AES FINAL/aes.srcs/sources_1/new/inv_subbytes.vhd:34' bound to instance 'u2' of component 'inv_subbytes' [B:/AES FINAL/aes.srcs/sources_1/new/inv_lastround.vhd:57]
+INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'inv_lastround' (22#1) [B:/AES FINAL/aes.srcs/sources_1/new/inv_lastround.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'decryption' (23#1) [B:/AES FINAL/aes.srcs/sources_1/new/decryption.vhd:39]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 399.176 ; gain = 154.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 399.176 ; gain = 154.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 399.176 ; gain = 154.563
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 399.176 ; gain = 154.563
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 11    
+	   2 Input     32 Bit         XORs := 40    
+	   2 Input      8 Bit         XORs := 586   
+	   7 Input      8 Bit         XORs := 144   
+	   3 Input      2 Bit         XORs := 600   
+	   2 Input      2 Bit         XORs := 600   
+	   2 Input      1 Bit         XORs := 15344 
+	   3 Input      1 Bit         XORs := 4200  
+	   4 Input      1 Bit         XORs := 600   
+	   5 Input      1 Bit         XORs := 560   
+	   6 Input      1 Bit         XORs := 200   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module decryption 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module comp 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 9     
+	   3 Input      1 Bit         XORs := 3     
+Module add 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
+Module mul2 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 1     
+Module con2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module mul 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      2 Bit         XORs := 1     
+	   2 Input      2 Bit         XORs := 1     
+Module square 
+Detailed RTL Component Info : 
++---XORs : 
+	   3 Input      1 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 2     
+	   4 Input      1 Bit         XORs := 1     
+Module xil_defaultlib_inv 
+Detailed RTL Component Info : 
++---XORs : 
+	   5 Input      1 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 1     
+	   3 Input      1 Bit         XORs := 1     
+	   6 Input      1 Bit         XORs := 1     
+Module invcomp 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 10    
+	   3 Input      1 Bit         XORs := 2     
+Module affine 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
+	   4 Input      1 Bit         XORs := 2     
+	   5 Input      1 Bit         XORs := 4     
+	   3 Input      1 Bit         XORs := 2     
+Module keyexpansion 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input     32 Bit         XORs := 4     
+	   2 Input      8 Bit         XORs := 1     
+Module inv_affine 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
+	   3 Input      1 Bit         XORs := 2     
+	   4 Input      1 Bit         XORs := 2     
+Module addroundkey 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+Module mul_2 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
+Module inv_mix 
+Detailed RTL Component Info : 
++---XORs : 
+	   7 Input      8 Bit         XORs := 1     
+	   2 Input      8 Bit         XORs := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:29 ; elapsed = 00:02:40 . Memory (MB): peak = 940.391 ; gain = 695.777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:32 ; elapsed = 00:02:46 . Memory (MB): peak = 940.391 ; gain = 695.777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:51 ; elapsed = 00:03:06 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:56 ; elapsed = 00:03:11 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:56 ; elapsed = 00:03:12 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:57 ; elapsed = 00:03:13 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:30 ; elapsed = 00:03:45 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:32 ; elapsed = 00:03:48 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:32 ; elapsed = 00:03:48 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |  1956|
+|2     |LUT3 |   752|
+|3     |LUT4 |  3648|
+|4     |LUT5 |  2956|
+|5     |LUT6 | 13300|
+|6     |IBUF |   256|
+|7     |OBUF |   128|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------------+------+
+|      |Instance |Module       |Cells |
++------+---------+-------------+------+
+|1     |top      |             | 22996|
+|2     |  u10    |inv_rounds   |  6328|
+|3     |  u2     |inv_rounds_0 | 16172|
+|4     |  u3     |inv_rounds_1 |    16|
+|5     |  u4     |inv_rounds_2 |    16|
+|6     |  u5     |inv_rounds_3 |    16|
+|7     |  u6     |inv_rounds_4 |    16|
+|8     |  u7     |inv_rounds_5 |    16|
+|9     |  u8     |inv_rounds_6 |    16|
+|10    |  u9     |inv_rounds_7 |    16|
++------+---------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:32 ; elapsed = 00:03:48 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:32 ; elapsed = 00:03:48 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+Synthesis Optimization Complete : Time (s): cpu = 00:03:32 ; elapsed = 00:03:48 . Memory (MB): peak = 1617.813 ; gain = 1373.199
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 256 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+156 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:54 ; elapsed = 00:04:13 . Memory (MB): peak = 1617.813 ; gain = 1385.938
+INFO: [Common 17-1381] The checkpoint 'B:/AES FINAL/aes.runs/synth_2/decryption.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1617.813 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file decryption_utilization_synth.rpt -pb decryption_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.208 . Memory (MB): peak = 1617.813 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 25 11:35:47 2018...

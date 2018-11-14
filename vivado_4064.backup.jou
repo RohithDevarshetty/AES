@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2014.2 (64-bit)
+# SW Build 932637 on Wed Jun 11 13:30:22 MDT 2014
+# IP Build 924643 on Fri May 30 09:20:16 MDT 2014
+# Start of session at: Fri Apr 06 00:00:46 2018
+# Process ID: 4064
+# Log file: C:/vhdl/aes/vivado.log
+# Journal file: C:/vhdl/aes\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:\vhdl\aes\aes.xpr}
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/vhdl/aes/aes.srcs/sim_1/new/aes_tb.vhd w ]
+add_files -fileset sim_1 C:/vhdl/aes/aes.srcs/sim_1/new/aes_tb.vhd
+update_compile_order -fileset sim_1
+launch_xsim -simset sim_1 -mode behavioral
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_xsim -simset sim_1 -mode behavioral
+launch_xsim -simset sim_1 -mode behavioral
+launch_xsim -simset sim_1 -mode behavioral

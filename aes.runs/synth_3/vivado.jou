@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Nov 14 09:08:46 2018
+# Process ID: 16188
+# Current directory: B:/vhdl codes/AES FINAL/aes.runs/synth_3
+# Command line: vivado.exe -log aes.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes.tcl
+# Log file: B:/vhdl codes/AES FINAL/aes.runs/synth_3/aes.vds
+# Journal file: B:/vhdl codes/AES FINAL/aes.runs/synth_3\vivado.jou
+#-----------------------------------------------------------
+source aes.tcl -notrace
